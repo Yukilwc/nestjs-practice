@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+</head>
+<body>
+    <div id="app">
+        {{array[0]}}
+    </div>
+
+    <script src="./observer.js"></script>
+    <script src="./watcher.js"></script>
+    <script src="./MVue.js"></script>
+    <script>
+        const vm = new MVue({
+            el: "#app",
+            data: {
+                name: "liwenchao",
+                array:["li","wen","chao"]
+            }
+        });
+        vm.init();
+    </script>
+</body>
+
+</html>
