@@ -5,21 +5,28 @@
 </head>
 <body>
     <div id="app">
-        {{array[0]}}
+        <span>{{name}}</span>
+        {{name}}test{{title}}
+        <div>
+            test{{name}}
+            <span>
+                {{name}}
+            </span>
+        </div>
     </div>
 
     <script src="./observer.js"></script>
     <script src="./watcher.js"></script>
-    <script src="./MVue.js"></script>
+    <script src="./MyVue.js"></script>
     <script>
-        const vm = new MVue({
+      /*  const vm = new MyVue({
             el: "#app",
             data: {
                 name: "liwenchao",
                 array:["li","wen","chao"]
             }
         });
-        vm.init();
+       */
     </script>
 </body>
 

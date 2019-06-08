@@ -7,7 +7,7 @@ function Watcher(obj,key,callback) {
     this.key = key;
     this.callback = callback;
     this.value = obj[key];//自身作为订阅者，注册到发布者中
-
+    this.callback();//构造一个watcher时，进行初始化
 
 }
 Watcher.prototype.update = function() {

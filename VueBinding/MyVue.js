@@ -1,12 +1,11 @@
-function MVue(options) {
-    this.options = options;
-    this.data = options.data;
-    this.el = document.querySelector(options.el);
+function MyVue(options) {
+    this.$options = options;
+    this.$data = options.data;
+    this.$el = document.querySelector(options.el);
+    this.init();
 }
-MVue.prototype.init = function () {
-    observer(this.data);
-    this.el.textContent = this.data["array"][0];
-    new Watcher(this.data, "array", value=> {
-        this.el.textContent = value;
-    })
+MyVue.prototype.init = function () {
+    //发布者进行监听
+    observer(this.$data);
+    new Compile(this);
 }
